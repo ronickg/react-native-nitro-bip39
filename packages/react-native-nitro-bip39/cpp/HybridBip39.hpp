@@ -21,6 +21,7 @@ namespace margelo::nitro::rnbip39
         std::string mnemonicToSeedHex(const std::string &mnemonic, const std::optional<std::string> &password) override;
         std::string mnemonicToEntropy(const std::string &mnemonic, std::optional<WordLists> wordlist) override;
         std::string entropyToMnemonic(const std::shared_ptr<ArrayBuffer> &entropy, std::optional<WordLists> wordlist) override;
+        std::string openSSLVersion() override;
 
     private:
         WordLists _defaultWordlist = WordLists::ENGLISH;

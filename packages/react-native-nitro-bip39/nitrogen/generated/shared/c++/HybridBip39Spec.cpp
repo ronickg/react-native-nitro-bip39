@@ -22,6 +22,7 @@ namespace margelo::nitro::rnbip39 {
       prototype.registerHybridMethod("mnemonicToSeedHex", &HybridBip39Spec::mnemonicToSeedHex);
       prototype.registerHybridMethod("mnemonicToEntropy", &HybridBip39Spec::mnemonicToEntropy);
       prototype.registerHybridMethod("entropyToMnemonic", &HybridBip39Spec::entropyToMnemonic);
+      prototype.registerHybridMethod("openSSLVersion", &HybridBip39Spec::openSSLVersion);
     });
   }
 

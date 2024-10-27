@@ -5,6 +5,8 @@
 #include <sstream>
 #include <iomanip>
 
+#include <openssl/crypto.h> // For OpenSSL_version function
+
 #include "bit_opts.h"
 #include "langs.h"
 #include "mnemonic.h"
@@ -131,6 +133,11 @@ namespace margelo::nitro::rnbip39
         bip39::Mnemonic mnemonic(entropyVec);
         auto word_list = mnemonic.GetWordList(wordlistStr);
         return bip39::GenerateWords(word_list, bip39::GetDelimiterByLang(wordlistStr));
+    }
+
+    std::string HybridBip39::openSSLVersion()
+    {
+        return OpenSSL_version(OPENSSL_VERSION);
     }
 
 } // namespace margelo::nitro::rnbip39

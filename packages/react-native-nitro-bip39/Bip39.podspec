@@ -21,7 +21,8 @@ Pod::Spec.new do |s|
     # Implementation (C++ objects)
     "cpp/**/*.{hpp,cpp}",
     "bip39_cpp/src/*.{cpp}",
-    "bip39_cpp/include/*.{h}"
+    "bip39_cpp/include/*.{h}",
+    "ios/Clibutf8proc.xcframework/**/*.{h,hpp}",
   ]
 
   s.dependency "OpenSSL-Universal"

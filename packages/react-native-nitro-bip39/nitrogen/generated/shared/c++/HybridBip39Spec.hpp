@@ -62,6 +62,7 @@ namespace margelo::nitro::rnbip39 {
       virtual std::string mnemonicToSeedHex(const std::string& mnemonic, const std::optional<std::string>& password) = 0;
       virtual std::string mnemonicToEntropy(const std::string& mnemonic, std::optional<WordLists> wordlist) = 0;
       virtual std::string entropyToMnemonic(const std::shared_ptr<ArrayBuffer>& entropy, std::optional<WordLists> wordlist) = 0;
+      virtual std::string openSSLVersion() = 0;
 
     protected:
       // Hybrid Setup

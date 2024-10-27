@@ -14,8 +14,7 @@ export type WordLists =
 
 export type WordCount = 12 | 15 | 18 | 21 | 24
 
-export interface Bip39
-  extends HybridObject<{ ios: 'c++'; android: 'c++' }> {
+export interface Bip39 extends HybridObject<{ ios: 'c++'; android: 'c++' }> {
   getDefaultWordlist(): WordLists
   setDefaultWordlist(value: WordLists): void
   generateMnemonic(
@@ -28,4 +27,5 @@ export interface Bip39
   mnemonicToSeedHex(mnemonic: string, password?: string): string
   mnemonicToEntropy(mnemonic: string, wordlist?: WordLists): string
   entropyToMnemonic(entropy: ArrayBuffer, wordlist?: WordLists): string
+  openSSLVersion(): string
 }
