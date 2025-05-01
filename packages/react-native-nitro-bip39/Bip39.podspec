@@ -25,12 +25,19 @@ Pod::Spec.new do |s|
     "ios/Clibutf8proc.xcframework/**/*.{h,hpp}",
   ]
 
-  s.dependency "OpenSSL-Universal"
 
+  s.pod_target_xcconfig = {
+    # C++ compiler flags, mainly for folly.
+    "GCC_PREPROCESSOR_DEFINITIONS" => "$(inherited) FOLLY_NO_CONFIG FOLLY_CFG_NO_COROUTINES"
+  }
+
+  s.dependency "OpenSSL-Universal"
   s.vendored_frameworks = "ios/Clibutf8proc.xcframework"
 
   load 'nitrogen/generated/ios/Bip39+autolinking.rb'
   add_nitrogen_files(s)
 
+  s.dependency 'React-jsi'
+  s.dependency 'React-callinvoker'
   install_modules_dependencies(s)
 end

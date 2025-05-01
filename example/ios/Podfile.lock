@@ -1,5 +1,5 @@
 PODS:
-  - Bip39 (0.0.4):
+  - Bip39 (0.0.5):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1826,7 +1826,7 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Bip39: dcfd00054a9dd80e390df5152e955973a8a191b5
+  Bip39: f3d3a089208021a5c624498374cb4d8c551d5bbb
   boost: 4cb898d0bf20404aab1850c656dcea009429d6c1
   DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   FBLazyVector: ee328dc37246cbe6d45ae4472951c0ca0dd6ffbf
@@ -1897,4 +1897,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 58299bccbadd6327605d2909ab37bfaf6b75b54c
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
